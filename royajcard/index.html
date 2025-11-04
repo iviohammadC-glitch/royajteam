@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Royaj Team</title>
+<link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet">
+
+<!-- جلوگیری از تغییر رنگ در دارک مود مرورگر -->
+<meta name="color-scheme" content="light">
+<meta name="supported-color-schemes" content="light">
+
+<style>
+  /* عمومی */
+  body {
+    margin: 0;
+    font-family: 'Vazirmatn', sans-serif;
+    background: linear-gradient(135deg, #10091D, #28193D, #46315C, #68507B);
+    background-size: 300% 300%;
+    -webkit-animation: bgMove 10s ease infinite;
+    animation: bgMove 10s ease infinite;
+    color: #D9D8D9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+    padding: 15px;
+  }
+
+  @-webkit-keyframes bgMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  @keyframes bgMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  /* کارت اصلی */
+  .card {
+    background: rgba(70, 49, 92, 0.85);
+    border-radius: 25px;
+    padding: 20px;
+    width: 90%;
+    max-width: 380px;
+    -webkit-box-shadow: 0 0 25px rgba(0,0,0,0.45);
+    box-shadow: 0 0 25px rgba(0,0,0,0.45);
+    text-align: center;
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    position: relative;
+    z-index: 3;
+  }
+
+  /* لوگو */
+  .name {
+    display: inline-block;
+    background: rgba(255,255,255,0.15);
+    border-radius: 50%;
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+
+  .name img {
+    max-height: 140px;
+    width: auto;
+    -webkit-filter: drop-shadow(0 0 10px rgba(255,255,255,0.9));
+    filter: drop-shadow(0 0 10px rgba(255,255,255,0.9));
+  }
+
+  /* متن و خطوط */
+  .role { font-size: 15px; color: #B3A3BA; margin-bottom: 10px; }
+  .line { width: 45px; height: 2px; background-color: #8D769A; margin: 8px auto; border-radius: 2px; }
+  .text { font-size: 13px; margin: 6px 0; text-align: justify; line-height: 1.6; }
+  .info h3 { font-size: 13px; margin: 6px 0; color: #D9D8D9; }
+
+  /* دکمه‌های اجتماعی */
+  .social-btn {
+    display: block;
+    width: 85%;
+    margin: 8px auto;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 50px;
+    padding: 10px 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 13px;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .insta { background: -webkit-linear-gradient(135deg, #FF6B6B, #F8B400); background: linear-gradient(135deg, #FF6B6B, #F8B400); -webkit-box-shadow: 0 0 10px rgba(255, 107, 107, 0.4); box-shadow: 0 0 10px rgba(255, 107, 107, 0.4); }
+  .telegram { background: -webkit-linear-gradient(135deg, #0088CC, #00BFFF); background: linear-gradient(135deg, #0088CC, #00BFFF); -webkit-box-shadow: 0 0 10px rgba(0, 136, 204, 0.4); box-shadow: 0 0 10px rgba(0, 136, 204, 0.4); }
+  .eitaa { background: -webkit-linear-gradient(135deg, #F39C12, #F5C469); background: linear-gradient(135deg, #F39C12, #F5C469); -webkit-box-shadow: 0 0 10px rgba(243, 156, 18, 0.4); box-shadow: 0 0 10px rgba(243, 156, 18, 0.4); }
+
+  .social-btn:hover { transform: scale(1.05); opacity: 0.9; }
+
+  /* پروانه */
+  .butterfly {
+    position: fixed;
+    width: 60px;
+    height: auto;
+    z-index: 5;
+    -webkit-animation: flyAround 45s linear infinite;
+    animation: flyAround 45s linear infinite;
+    pointer-events: none;
+    opacity: 0.9;
+  }
+
+  @-webkit-keyframes flyAround {
+    0% { top: 10%; left: 5%; -webkit-transform: rotate(0deg) scale(1); transform: rotate(0deg) scale(1); }
+    20% { top: 30%; left: 80%; -webkit-transform: rotate(20deg) scale(0.9); transform: rotate(20deg) scale(0.9); }
+    40% { top: 70%; left: 60%; -webkit-transform: rotate(-15deg) scale(1.1); transform: rotate(-15deg) scale(1.1); }
+    60% { top: 80%; left: 20%; -webkit-transform: rotate(10deg) scale(1); transform: rotate(10deg) scale(1); }
+    80% { top: 50%; left: 10%; -webkit-transform: rotate(-10deg) scale(0.95); transform: rotate(-10deg) scale(0.95); }
+    100% { top: 10%; left: 5%; -webkit-transform: rotate(0deg) scale(1); transform: rotate(0deg) scale(1); }
+  }
+
+  /* ریسپانسیو */
+  @media (max-width: 768px) {
+    .card { width: 90%; padding: 18px; }
+    .name img { max-height: 130px; }
+    .text, .info h3, .role { font-size: 13px; }
+  }
+  @media (max-width: 480px) {
+    .card { width: 95%; padding: 16px; }
+    .name img { max-height: 120px; }
+    .text, .info h3, .role { font-size: 12px; }
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="name"><img src="logo.png" alt="رویاج"></div>
+    <div class="role">اجرای رویایی هر رویداد با تیم رویاج</div>
+    <div class="line"></div>
+
+    <div class="text">
+      روياج : اجراى رويدادها به سبك خاص و حرفه‌اى براى كسب و كارها.<br>
+      تیم ما مركز خلق لحظه‌هاى ماندگار و سازمان‌يافته‌اى كه كسب‌وكارها رو جلوه‌گر مى‌كنه.
+    </div>
+
+    <div class="line"></div>
+
+    <div class="text">
+      روياج، يك تیم خلاق در زمينه طراحى و اجراى مراسم‌ها و رويدادهاى کسب و کار شما:<br>
+      ۱. افتتاحیه و اختتامیه<br>
+      ۲. همایش‌ها و سمینارها<br>
+      ۳. مراسم رونمایی از محصول<br>
+      ۴. ایونت‌ها و نمایشگاه‌ها<br>
+      ۵. رویدادهای مناسبتی و …<br>
+      ما در رویاج رویداد ها را از ایده تا اجرا به بهترین نحو مدیریت میکنیم.
+    </div>
+
+    <div class="line"></div>
+
+    <div class="info"><h3>تلفن: 6405 025 0996</h3></div>
+    <div class="info"><h3>ایمیل: Royaj.team@Gmail.com</h3></div>
+
+    <a href="https://www.instagram.com/royaj_team?igsh=MTNtaWJyZjRtYjI4MQ==" target="_blank" class="social-btn insta">  اینستاگرام</a>
+    <a href="https://t.me/+WXdlsf5_dMs2YjM0" target="_blank" class="social-btn telegram"> تلگرام </a>
+    <a href="https://eitaa.com/Royaj_team" target="_blank" class="social-btn eitaa">  ایتا</a>
+  </div>
+
+  <img src="butterfly.gif" alt="پروانه متحرک" class="butterfly">
+</body>
+</html>
